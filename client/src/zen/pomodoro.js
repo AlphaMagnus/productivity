@@ -16,10 +16,10 @@ const Pomodoro = () => {
             setIsActive(false);
             if (!isBreak) {
               setIsBreak(true);
-              setMinutes(5); // set break time to 5 minutes
+              setMinutes(5); 
             } else {
               setIsBreak(false);
-              setMinutes(25); // reset to pomodoro time
+              setMinutes(25);
             }
             postTime();
           } else {
