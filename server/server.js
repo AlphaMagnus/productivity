@@ -8,15 +8,26 @@ const port = 3500;
 const UserSchema = new mongoose.Schema({
     username: String,
     password: String,
-
-
+    date: Date,
+    habitArr: Array,
+    usertask: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Course'
+    }]
 })
 
-const User = mongoose.model('User',UserSchemaSchema);
+const MatrixSchema = new mongoose.Schema({
+    todo: {
+        urgent: Boolean,
+        important: Boolean,
+        task: String
+    }
+})
+
+const User = mongoose.model('User',UserSchema);
+const Matrix = mongoose.model('Matrix',MatrixSchema);
 
 function userMiddleware(req, res, next) {
-    // Implement user auth logic
-    // You need to check the headers and validate the user from the user DB. Check readme for the exact headers to be expected
     const username = req.headers.username;
     const password = req.headers.password;
 
@@ -33,6 +44,8 @@ function userMiddleware(req, res, next) {
         }
     })
 }
+
+
 
 
 app.listen(port,()=>{
