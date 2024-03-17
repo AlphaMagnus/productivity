@@ -8,8 +8,9 @@ import Pomodoro from './zen/pomodoro';
 function App() {
   return (
     <div className="App">
-      <MusicPlayer/>
+      
       <Pomodoro/>
+      <MusicPlayer/>
     </div>
   );
 }
