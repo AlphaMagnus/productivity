@@ -1,8 +1,16 @@
-.progress-circle {
-    position: relative;
+.pomodoro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .progress-circle {
     width: 100px;
     height: 100px;
-  }
+    
+}
+
   
   .progress-circle svg {
     width: 100%;
@@ -17,15 +25,24 @@
   
   .progress-circle circle:last-child {
     stroke: #00cc66;
-    stroke-dasharray: 251;
-    transition: stroke-dashoffset 1s linear;
   }
   
-  .progress-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2rem;
+  .progress-indicator {
+    fill: #00cc66;
+    transform-origin: center;
+    transition: transform s linear;
+  }
+  
+  .progress-indicator.animate {
+    animation: moveIndicator 60s linear infinite;
+  }
+  
+  @keyframes moveIndicator {
+    from {
+      transform: rotate(-90deg);
+    }
+    to {
+      transform: rotate(90deg);
+    }
   }
   

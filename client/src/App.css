@@ -37,3 +37,37 @@
   }
 }
 
+#music{
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+}
+.buttons{
+  display: grid;
+  height: fit-content;
+  width: fit-content;
+  grid-template-columns: auto auto auto;
+  column-gap: 10px;
+ row-gap: 10px;
+ padding-top: 10px;
+  padding-left:50px ;
+  border-radius: 10px;
+}
+#button-1{
+  border-radius: 10px;
+}
+#button-2{
+  border-radius: 10px;
+}
+#button-3{
+  border-radius: 10px;
+}
+#button-4{
+  border-radius: 10px;
+}
+#button-5{
+  border-radius: 10px;
+}
+#button-6{
+  border-radius: 10px;
+}
