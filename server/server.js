@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 const app = express();
-mongoose.connect('mongodb+srv://Avijit:uqUcJf8qLYRQdHQO@cluster1.jtceric.mongodb.net/');
+mongoose.connect('mongodb://localhost:27017/mydatabase');
 const port = 3500;
 
 const UserSchema = new mongoose.Schema({
