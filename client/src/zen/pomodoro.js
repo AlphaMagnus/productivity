@@ -75,9 +75,6 @@ const Pomodoro = () => {
         <h1>{`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`}</h1>
         <button onClick={toggleTimer}>{isActive ? 'Pause' : 'Start'}</button>
         <button onClick={resetTimer}>Reset</button>
-        <button onClick={() => addTime(1)}>+1 min</button>
-        <button onClick={() => addTime(5)}>+5 min</button>
-        <button onClick={() => addTime(10)}>+10 min</button>
         {!isBreak && (
           <button onClick={() => {
             setIsActive(true);
@@ -86,6 +83,10 @@ const Pomodoro = () => {
             setSeconds(0);
           }}>Break</button>
         )}
+        <button onClick={() => addTime(1)}>+1 min</button>
+        <button onClick={() => addTime(5)}>+5 min</button>
+        <button onClick={() => addTime(10)}>+10 min</button>
+        
       </div>
     </div>
   );
